@@ -1,7 +1,5 @@
 package com.codedifferently.stayready;
 
-import javax.naming.spi.DirObjectFactory;
-
 public class Wufinancial {
    public Double money = 0.0;
 
