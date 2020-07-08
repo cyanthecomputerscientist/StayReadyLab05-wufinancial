@@ -1,79 +1,111 @@
 package com.codedifferently.stayready;
 
+import javax.naming.spi.DirObjectFactory;
+
 public class Wufinancial {
    public Double money = 0.0;
 
 
     public Double dollarToEuro(Double money) //Converts a dollar to Euro
     {
-        return 0.0;
+        final Double rate = 0.94;  
+        
+        return money *rate;
     }
 
     public Double euroToDollar(Double cash) //Converts a euro to a Dollar
     {
-        return 0.0;
+        final Double rate = 0.94; 
+        return cash/rate;
     }
 
     public Double euroToPound(Double cash) //Converts a euro to a pound
     {
-        return 0.0;
+        final Double rate = 0.82;
+        Double conversion =euroToDollar(cash);
+
+        return conversion *rate;
     }
+
     public Double PoundToDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 0.82;
+        return cash/rate;
     }
     public Double poundToRupee(Double cash) //Converts a pound to a rupee
     {
-        return 0.0;
+        final Double rate = 68.32;
+        Double conversion = PoundToDollar(cash);
+        return conversion * rate ;
     }
     public Double rupeeToDollar(Double cash)
     {
-        return 0.0;
+        final Double rate =68.32;
+        return cash/rate;
     }
     public Double rupeetoCanadianDollar(Double cash) //Converts a rupee to a canadian dollar
     {
-        return 0.0;
+        final Double rate = 1.32;
+        Double conversion = rupeeToDollar(cash);
+        return conversion *rate;
     }
     public Double CanadianDollartoDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 1.32;
+        return cash/rate;
     }
     public Double canadianDollartoSingaporeDollar(Double cash) //canadian dollar to a Singapore dollar
     {
-        return 0.0; 
+        final Double rate = 1.43;
+        Double conversion = CanadianDollartoDollar(cash);
+        
+        return conversion *rate; 
     }
-    public Double SingaporeDollarToDollar(Double cash)
+    public Double singaporeDollarToDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 1.43;
+        return cash/rate;
     }
     public Double singaporeDollarToFranc(Double cash) //Singapore dollar to Franc
     {
-        return 0.0;
+        final Double rate = 1.01;
+        Double conversion = singaporeDollarToDollar(cash);
+        return conversion * rate;
     }
     public Double FrancToDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 1.01;
+        return cash/rate;
     }
     public Double franctoRinggit(Double cash) //Franc to Ringgit 
     {
-        return 0.0;
+        final Double rate = 4.47; 
+        Double conversion = FrancToDollar(cash);
+        return conversion *rate;
     }
+
     public Double ringgittoDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 4.47;
+        return cash/rate;
     }
     public Double ringgitToYen(Double cash) //Ringgit To Yen
     {
-        return 0.0;
+        final Double rate =115.84;
+        Double conversion = ringgittoDollar(cash);
+        return conversion * rate;
     }
-    public Double YuanRenmibiToDollar(Double cash)
+    public Double yenToDollar(Double cash)
     {
-        return 0.0;
+        final Double rate = 115.84;
+        return cash/rate;
     }
 
     public Double yenToYuanRenmibi(Double cash) //Yen to Yuan Renmibi
     {
-        return 0.0;
+        final Double rate = 6.92;
+        Double conversion =yenToDollar(cash);
+        return conversion *rate;
     }
 
 
